@@ -1,0 +1,121 @@
+
+html,
+body,
+header,
+.carousel {
+    height: 60vh;
+}
+
+@media (max-width: 740px) {
+
+    html,
+    body,
+    header,
+    .carousel {
+    height: 100vh;
+    }
+}
+
+
+
+@media (min-width: 800px) and (max-width: 850px) {
+
+    html,
+    body,
+    header,
+    .carousel {
+    height: 100vh;
+    }
+}
+
+
+/* Required height of parents of the Half Page Carousel for proper displaying carousel itself */
+html,
+body,
+.view {
+  height: 100%; }
+
+/* Half Page Carousel itself*/
+.carousel {
+  height: 50%; }
+  .carousel .carousel-inner {
+    height: 100%; }
+    .carousel .carousel-inner .carousel-item,
+    .carousel .carousel-inner .active {
+      height: 100%; }
+
+/* Adjustment for mobile devices*/
+@media (max-width: 776px) {
+  .carousel {
+    height: 100%; } }
+
+/* Footer color for sake of consistency with Navbar */
+.page-footer {
+  background-color: #929FBA; }
+
+
+.view img{
+  min-width: 50%;
+  left: 25%;
+  top: 10px;
+}
+
+.info{
+  border-bottom: 2px solid $blue;
+}
+
+.error{
+  color: red !important;
+}
+
+.fa-shopping-cart:hover{
+  color:  #D50000 !important;
+}
+
+.product-title:hover{
+  text-decoration: underline;
+}
+
+.list-group-item{
+  border: 0px;
+  &:hover{
+    background-color: #45526E;
+    color: #fff;
+  }
+}
+
+.map-container{
+  overflow:hidden;
+  padding-bottom:56.25%;
+  position:relative;
+  height:0;
+  }
+  .map-container iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+  }
+
+// ************************************ MEDIA QUERIES
+@include media-breakpoint-down(xs) { 
+  .add-to-cart{
+    position: relative;
+    left: 20%;
+  }
+}
+
+@include media-breakpoint-only(sm) { 
+  .add-to-cart{
+    position: relative;
+    left: 55%;
+  }
+ }
+
+ @include media-breakpoint-only(md) { 
+  .add-to-cart{
+    position: relative;
+    left: 90%;
+  }
+  }
